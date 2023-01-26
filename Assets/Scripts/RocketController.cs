@@ -72,7 +72,7 @@ public class RocketController : MonoBehaviour
         
         var angle = Mathf.Lerp(30, -30, neededTransform.x);
 
-        tr.position = Vector3.MoveTowards(position, neededTransform, 10 * Time.deltaTime);
+        tr.position = Vector3.MoveTowards(position, neededTransform, 10 * Time.fixedDeltaTime);
         tr.eulerAngles = new Vector3(0, angle, 0);
     }
 
